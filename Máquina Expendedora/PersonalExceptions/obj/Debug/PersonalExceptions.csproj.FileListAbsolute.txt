@@ -1,0 +1,6 @@
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\PersonalExceptions\bin\Debug\PersonalExceptions.dll
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\PersonalExceptions\bin\Debug\PersonalExceptions.pdb
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\PersonalExceptions\obj\Debug\PersonalExceptions.csprojAssemblyReference.cache
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\PersonalExceptions\obj\Debug\PersonalExceptions.csproj.CoreCompileInputs.cache
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\PersonalExceptions\obj\Debug\PersonalExceptions.dll
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\PersonalExceptions\obj\Debug\PersonalExceptions.pdb

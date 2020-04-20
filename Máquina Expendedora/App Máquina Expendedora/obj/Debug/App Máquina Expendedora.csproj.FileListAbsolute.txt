@@ -1,0 +1,12 @@
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\bin\Debug\App Máquina Expendedora.exe.config
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\bin\Debug\App Máquina Expendedora.exe
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\bin\Debug\App Máquina Expendedora.pdb
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\bin\Debug\ClassLibrary.dll
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\bin\Debug\ClassLibrary.pdb
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\obj\Debug\App Máquina Expendedora.csprojAssemblyReference.cache
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\obj\Debug\App Máquina Expendedora.csproj.CoreCompileInputs.cache
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\obj\Debug\App Máquina Expendedora.csproj.CopyComplete
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\obj\Debug\App Máquina Expendedora.exe
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\obj\Debug\App Máquina Expendedora.pdb
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\bin\Debug\PersonalExceptions.dll
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\App Máquina Expendedora\bin\Debug\PersonalExceptions.pdb

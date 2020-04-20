@@ -1,0 +1,9 @@
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\ClassLibrary\obj\Debug\ClassLibrary.csprojAssemblyReference.cache
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\ClassLibrary\bin\Debug\PersonalExceptions.dll
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\ClassLibrary\bin\Debug\PersonalExceptions.pdb
+C:\Users\Juan Cruz\Documents\Visual Studio 2019\CAI\CAI-19042020-MaquinaExpendedora-\Máquina Expendedora\ClassLibrary\obj\Debug\ClassLibrary.csproj.CopyComplete
