@@ -8,7 +8,7 @@ namespace PersonalExceptions
 {
     public class DineroInsuficienteException : Exception
     {
-        public DineroInsuficienteException() : base("El dinero ingresado no es suficiente para comprar la lata.")
+        public DineroInsuficienteException(string dineroFaltante) : base("El dinero ingresado no es suficiente para comprar la lata.\nLe faltan $" + dineroFaltante)
         {
 
         }

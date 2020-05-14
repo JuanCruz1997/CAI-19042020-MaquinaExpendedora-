@@ -13,18 +13,21 @@ namespace ClassLibrary
         private string _sabor;
         private double _precio;
         private double _volumen;
-        public Lata(string codigo, double precio, double volumen)
+        public Lata(string codigo, double volumen)
         {
             this._codigo = codigo;
             if (codigo.Contains("CO"))
             {
                 this._nombre = "Coca Cola";
+                this._precio = 35;
             }else if (codigo.Contains("SP"))
             {
                 this._nombre = "Sprite";
+                this._precio = 33;
             }else if (codigo.Contains("FA"))
             {
                 this._nombre = "Fanta";
+                this._precio = 50;
             }
             if (codigo.Contains("1"))
             {
@@ -32,8 +35,8 @@ namespace ClassLibrary
             }else if (codigo.Contains("2"))
             {
                 this._sabor = "Zero";
+                this._precio += 10;
             }
-            this._precio = precio;
             this._volumen = volumen;
         }
         public string Codigo

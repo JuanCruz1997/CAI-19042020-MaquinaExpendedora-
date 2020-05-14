@@ -119,9 +119,8 @@ namespace App_Máquina_Expendedora
                     throw new CodigoInvalidoException();
                 }
                 string c = ingresoNombre + ingresoTipo;
-                double p = ConsolaHelper.PedirDouble("precio:");
                 double v = ConsolaHelper.PedirDouble("volumen:");
-                app.AgregarLata(new Lata(c, p, v));
+                app.AgregarLata(new Lata(c, v));
                 Console.WriteLine("Lata agregada con éxito.");
             }
             catch(CodigoInvalidoException ciex)
@@ -151,7 +150,13 @@ namespace App_Máquina_Expendedora
                 }
                 double dinero = ConsolaHelper.PedirDouble("dinero:");
                 Lata extraccion = app.ExtraerLata(codigo, dinero);
-                Console.WriteLine("Ha comprado la bebida " + extraccion.ToString());
+                if (dinero > extraccion.Precio)
+                {
+                    Console.WriteLine("Ha comprado la bebida " + extraccion.ToString() + "\nSu vuelto es $" + (dinero - extraccion.Precio));
+                }else if (dinero == extraccion.Precio)
+                {
+                    Console.WriteLine("Ha comprado la bebida " + extraccion.ToString());
+                }
             }
             catch (CodigoInvalidoException ciex)
             {

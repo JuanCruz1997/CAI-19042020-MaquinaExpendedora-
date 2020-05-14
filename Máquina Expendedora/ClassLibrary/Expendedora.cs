@@ -18,12 +18,12 @@ namespace ClassLibrary
         {
             this._proveedor = proveedor;
             this._capacidad = capacidad;
-            _latas.Add(new Lata("CO1", 35, 0.355));
-            _latas.Add(new Lata("CO2", 45, 0.355));
-            _latas.Add(new Lata("SP1", 33, 0.220));
-            _latas.Add(new Lata("SP2", 43, 0.220));
-            _latas.Add(new Lata("FA1", 50, 0.355));
-            _latas.Add(new Lata("FA2", 60, 0.355));
+            _latas.Add(new Lata("CO1", 0.355));
+            _latas.Add(new Lata("CO2", 0.355));
+            _latas.Add(new Lata("SP1", 0.220));
+            _latas.Add(new Lata("SP2", 0.220));
+            _latas.Add(new Lata("FA1", 0.355));
+            _latas.Add(new Lata("FA2", 0.355));
         }
         public List<Lata> Latas
         {
@@ -68,7 +68,7 @@ namespace ClassLibrary
             {
                 if (codigo == l.Codigo)
                 {
-                    if (dinero == l.Precio)
+                    if (dinero == l.Precio || dinero > l.Precio)
                     {
                         extraccion = l;
                         this._latas.Remove(l);
@@ -77,15 +77,18 @@ namespace ClassLibrary
                     }
                     else
                     {
-                        throw new DineroInsuficienteException();
+                        throw new DineroInsuficienteException((l.Precio-dinero).ToString());
                     }
                 }
-                else
-                {
-                    throw new SinStockException();
-                }
             }
-            return extraccion;
+            if (extraccion != null)
+            {
+                return extraccion;
+            }
+            else
+            {
+                throw new SinStockException();
+            }
         }
         public string GetBalance()
         {
