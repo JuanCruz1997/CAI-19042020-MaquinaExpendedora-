@@ -55,7 +55,6 @@
             this.lstLatas.ItemHeight = 16;
             this.lstLatas.Location = new System.Drawing.Point(12, 55);
             this.lstLatas.Name = "lstLatas";
-            this.lstLatas.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.lstLatas.Size = new System.Drawing.Size(334, 180);
             this.lstLatas.TabIndex = 2;
             this.lstLatas.SelectedIndexChanged += new System.EventHandler(this.lstLatas_SelectedIndexChanged);
@@ -88,6 +87,7 @@
             this.btnBalance.TabIndex = 5;
             this.btnBalance.Text = "Ver Balance";
             this.btnBalance.UseVisualStyleBackColor = true;
+            this.btnBalance.Click += new System.EventHandler(this.btnBalance_Click);
             // 
             // btnStock
             // 
@@ -97,6 +97,7 @@
             this.btnStock.TabIndex = 6;
             this.btnStock.Text = "Stock";
             this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
             // btnApagar
             // 

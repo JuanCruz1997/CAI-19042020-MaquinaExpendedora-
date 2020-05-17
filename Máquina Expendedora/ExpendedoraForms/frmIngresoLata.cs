@@ -27,6 +27,7 @@ namespace ExpendedoraForms
         {
             lstLatasIngreso.DataSource = null;
             lstLatasIngreso.DataSource = latas;
+            LimpiarCampos();
         }
         private void CargarComboCodigo()
         {
@@ -42,41 +43,44 @@ namespace ExpendedoraForms
         }
         private void Cambiarlbl()
         {
-            if (cmbCodigo.SelectedValue.ToString() == "CO1")
+            string codigo = cmbCodigo.Text;
+            switch (codigo)
             {
-                lblPrecio.Text = "Precio: $35";
-                lblMarca.Text = "Marca: Coca Cola";
-                lblSabor.Text = "Sabor: Regular";
-            }
-            else if (cmbCodigo.SelectedValue.ToString() == "CO2")
-            {
-                lblPrecio.Text = "Precio: $45";
-                lblMarca.Text = "Marca: Coca Cola";
-                lblSabor.Text = "Sabor: Zero";
-            }
-            else if (cmbCodigo.SelectedValue.ToString() == "SP1")
-            {
-                lblPrecio.Text = "Precio: $33";
-                lblMarca.Text = "Marca: Sprite";
-                lblSabor.Text = "Sabor: Regular";
-            }
-            else if (cmbCodigo.SelectedValue.ToString() == "SP2")
-            {
-                lblPrecio.Text = "Precio: $43";
-                lblMarca.Text = "Marca: Sprite";
-                lblSabor.Text = "Sabor: Zero";
-            }
-            else if (cmbCodigo.SelectedValue.ToString() == "FA1")
-            {
-                lblPrecio.Text = "Precio: $50";
-                lblMarca.Text = "Marca: Fanta";
-                lblSabor.Text = "Sabor: Regular";
-            }
-            else if (cmbCodigo.SelectedValue.ToString() == "FA2")
-            {
-                lblPrecio.Text = "Precio: $60";
-                lblMarca.Text = "Marca: Fanta";
-                lblSabor.Text = "Sabor: Zero";
+                case "CO1":
+                    lblPrecio.Text = "Precio: $35";
+                    lblMarca.Text = "Marca: Coca Cola";
+                    lblSabor.Text = "Sabor: Regular";
+                    break;
+                case "CO2":
+                    lblPrecio.Text = "Precio: $45";
+                    lblMarca.Text = "Marca: Coca Cola";
+                    lblSabor.Text = "Sabor: Zero";
+                    break;
+                case "SP1":
+                    lblPrecio.Text = "Precio: $33";
+                    lblMarca.Text = "Marca: Sprite";
+                    lblSabor.Text = "Sabor: Regular";
+                    break;
+                case "SP2":
+                    lblPrecio.Text = "Precio: $43";
+                    lblMarca.Text = "Marca: Sprite";
+                    lblSabor.Text = "Sabor: Zero";
+                    break;
+                case "FA1":
+                    lblPrecio.Text = "Precio: $50";
+                    lblMarca.Text = "Marca: Fanta";
+                    lblSabor.Text = "Sabor: Regular";
+                    break;
+                case "FA2":
+                    lblPrecio.Text = "Precio: $60";
+                    lblMarca.Text = "Marca: Fanta";
+                    lblSabor.Text = "Sabor: Zero";
+                    break;
+                default:
+                    lblPrecio.Text = "Precio:";
+                    lblMarca.Text = "Marca:";
+                    lblSabor.Text = "Sabor:";
+                    break;
             }
         }
         private Boolean ValidarCampos()
@@ -94,16 +98,50 @@ namespace ExpendedoraForms
             }
             return valido;
         }
+        private void LimpiarCampos()
+        {
+            txtVolumen.Text = string.Empty;
+            cmbCodigo.SelectedIndex = 0;
+        }
+        private string TraerTipoSeleccionado()
+        {
+            string codigo = cmbCodigo.Text;
+            switch (codigo)
+            {
+                case "CO1":
+                    return "CO1";
+                case "CO2":
+                    return "CO2";
+                case "SP1":
+                    return "SP1";
+                case "SP2":
+                    return "SP2";
+                case "FA1":
+                    return "FA1";
+                case "FA2":
+                    return "FA2";
+                default:
+                    return "";
+            }
+        }
         #endregion
+        #region "Eventos"
         private void frmIngresoLata_Load(object sender, EventArgs e)
         {
-            CargarListaLatas(_expendedora.Latas);
             CargarComboCodigo();
+            CargarListaLatas(_expendedora.Latas);
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (cmbCodigo.SelectedIndex != 0 || txtVolumen.Text != String.Empty)
+            {
+                DialogResult pregunta = MessageBox.Show("Se perderán los datos ingresados. ¿Está seguro de cerrar la aplicación?", "Salir", MessageBoxButtons.YesNo);
+                if (pregunta.ToString() == "Yes")
+                {
+                    Application.Exit();
+                }
+            }
         }
         private void cmbTipoCodigo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -115,15 +153,22 @@ namespace ExpendedoraForms
         }
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
-            this.Dispose();
+            if (cmbCodigo.SelectedIndex != 0 || txtVolumen.Text != String.Empty)
+            {
+                DialogResult pregunta = MessageBox.Show("Se perderán los datos ingresados. ¿Está seguro de volver al menú principal?", "Atención", MessageBoxButtons.YesNo);
+                if (pregunta.ToString() == "Yes")
+                {
+                    this.Owner.Show();
+                    this.Dispose();
+                }
+            }
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (txtVolumen.Text != String.Empty)
+            if (txtVolumen.Text == String.Empty)
             {
-                MessageBox.Show("Para agregar una nueva lata debe limpiar el formulario primero.");
+                MessageBox.Show("Debe especificar el volumen de la lata");
             }
             else
             {
@@ -131,14 +176,22 @@ namespace ExpendedoraForms
                 {
                     if (ValidarCampos())
                     {
-                        Lata lataAIngresar = new Lata(cmbCodigo.SelectedValue.ToString(), txtVolumen.Text.ToñDo);
+                        _expendedora.AgregarLata(new Lata(TraerTipoSeleccionado(), Convert.ToDouble(txtVolumen.Text)));
+                        MessageBox.Show("Se ha añadido la lata a la expendedora.");
+                        CargarListaLatas(_expendedora.Latas);
                     }
                 }
-                catch(Exception e)
+                catch(Exception ex)
                 {
-
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
+
+        private void lstLatasIngreso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
+    #endregion
 }

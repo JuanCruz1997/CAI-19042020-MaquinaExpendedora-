@@ -33,6 +33,22 @@ namespace ExpendedoraForms
             lstLatas.DataSource = null;
             lstLatas.DataSource = latas;
         }
+        private string ObtenerStock()
+        {
+            string stock = "";
+            if (_expendedora.EstaVacia())
+            {
+                stock = "La máquina expendedora no posee stock.";
+            }
+            else
+            {
+                foreach(Lata l in _expendedora.Latas)
+                {
+                    stock += String.Format("{0} - {1} ${2} / $/L {3}", l.Nombre, l.Sabor, l.Precio, l.GetPrecioPorLitro() + "\n");
+                }
+            }
+            return stock;
+        }
         #endregion
         #region "Eventos"
         private void frmExpendedora_Load(object sender, EventArgs e)
@@ -52,15 +68,30 @@ namespace ExpendedoraForms
         }
         private void btnExtraerLata_Click(object sender, EventArgs e)
         {
-            frmExtraerLata fexp = new frmExtraerLata(_expendedora, this);
-            fexp.Owner = this;
-            fexp.Show();
-            this.Hide();
+            if (lstLatas == null)
+            {
+                MessageBox.Show("La máquina está vacía. No se pueden extraer latas.");
+            }
+            else
+            {
+                frmExtraerLata fexp = new frmExtraerLata(_expendedora, this);
+                fexp.Owner = this;
+                fexp.Show();
+                this.Hide();
+            } 
         }
         private void btnApagar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        #endregion
+        private void btnBalance_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Balance de la máquina expendedora:\n" + _expendedora.GetBalance(), "Balance");
+        }
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(ObtenerStock(), "Stock");
+        }
     }
+    #endregion
 }

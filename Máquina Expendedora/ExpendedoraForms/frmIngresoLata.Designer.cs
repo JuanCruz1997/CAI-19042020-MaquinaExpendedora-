@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblIngresar = new System.Windows.Forms.Label();
             this.lstLatasIngreso = new System.Windows.Forms.ListBox();
             this.btnApagarIngreso = new System.Windows.Forms.Button();
@@ -41,6 +42,8 @@
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.cmbCodigo = new System.Windows.Forms.ComboBox();
+            this.expendedoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.expendedoraBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIngresar
@@ -61,9 +64,9 @@
             this.lstLatasIngreso.ItemHeight = 16;
             this.lstLatasIngreso.Location = new System.Drawing.Point(12, 55);
             this.lstLatasIngreso.Name = "lstLatasIngreso";
-            this.lstLatasIngreso.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.lstLatasIngreso.Size = new System.Drawing.Size(334, 180);
             this.lstLatasIngreso.TabIndex = 3;
+            this.lstLatasIngreso.SelectedIndexChanged += new System.EventHandler(this.lstLatasIngreso_SelectedIndexChanged);
             // 
             // btnApagarIngreso
             // 
@@ -168,6 +171,10 @@
             this.cmbCodigo.TabIndex = 10;
             this.cmbCodigo.SelectedIndexChanged += new System.EventHandler(this.cmbTipoCodigo_SelectedIndexChanged);
             // 
+            // expendedoraBindingSource
+            // 
+            this.expendedoraBindingSource.DataSource = typeof(ClassLibrary.Expendedora);
+            // 
             // frmIngresoLata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -189,6 +196,7 @@
             this.Name = "frmIngresoLata";
             this.Text = "Expendedora";
             this.Load += new System.EventHandler(this.frmIngresoLata_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.expendedoraBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,5 +217,6 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.ComboBox cmbCodigo;
+        private System.Windows.Forms.BindingSource expendedoraBindingSource;
     }
 }
