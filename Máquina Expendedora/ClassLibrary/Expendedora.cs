@@ -68,12 +68,17 @@ namespace ClassLibrary
             {
                 if (codigo == l.Codigo)
                 {
-                    if (dinero == l.Precio || dinero > l.Precio)
+                    if (dinero == l.Precio)
                     {
                         extraccion = l;
                         this._latas.Remove(l);
                         this._dinero += dinero;
                         break;
+                    }else if (dinero > l.Precio)
+                    {
+                        extraccion = l;
+                        this._latas.Remove(l);
+                        this._dinero += l.Precio;
                     }
                     else
                     {

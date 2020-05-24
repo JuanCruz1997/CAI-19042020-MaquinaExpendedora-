@@ -49,6 +49,11 @@ namespace ExpendedoraForms
             }
             return stock;
         }
+        public void ShowReload()
+        {
+            CargarListaLatas(_expendedora.Latas);
+            this.Show();
+        }
         #endregion
         #region "Eventos"
         private void frmExpendedora_Load(object sender, EventArgs e)

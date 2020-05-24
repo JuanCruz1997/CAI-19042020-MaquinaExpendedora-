@@ -123,6 +123,34 @@ namespace ExpendedoraForms
                     return "";
             }
         }
+        private void CompletarFormulario(Lata seleccionada)
+        {
+            switch (seleccionada.Codigo)
+            {
+                case "CO1":
+                    cmbCodigoEx.SelectedIndex = 1;
+                    break;
+                case "CO2":
+                    cmbCodigoEx.SelectedIndex = 2;
+                    break;
+                case "SP1":
+                    cmbCodigoEx.SelectedIndex = 3;
+                    break;
+                case "SP2":
+                    cmbCodigoEx.SelectedIndex = 4;
+                    break;
+                case "FA1":
+                    cmbCodigoEx.SelectedIndex = 5;
+                    break;
+                case "FA2":
+                    cmbCodigoEx.SelectedIndex = 6;
+                    break;
+                default:
+                    cmbCodigoEx.SelectedIndex = 0;
+                    break;
+            }
+            txtDinero.Text = seleccionada.Precio.ToString();
+        }
         #endregion
 
         private void frmExtraerLata_Load(object sender, EventArgs e)
@@ -144,6 +172,10 @@ namespace ExpendedoraForms
                     Application.Exit();
                 }
             }
+            else
+            {
+                Application.Exit();
+            }
         }
         private void btnVolverEx_Click(object sender, EventArgs e)
         {
@@ -152,9 +184,14 @@ namespace ExpendedoraForms
                 DialogResult pregunta = MessageBox.Show("Se perderán los datos ingresados. ¿Está seguro de volver al menú principal?", "Atención", MessageBoxButtons.YesNo);
                 if (pregunta.ToString() == "Yes")
                 {
-                    this.Owner.Show();
+                    this.Owner.ShowReload();
                     this.Dispose();
                 }
+            }
+            else
+            {
+                this.Owner.ShowReload();
+                this.Dispose();
             }
         }
         private void btnExtraer_Click(object sender, EventArgs e)
@@ -170,11 +207,11 @@ namespace ExpendedoraForms
                     if (ValidarCampos())
                     {
                         Lata lataExtraida = _expendedora.ExtraerLata(TraerTipoSeleccionado(), Convert.ToDouble(txtDinero.Text));
-                        if (Convert.ToDouble(txtDinero) > lataExtraida.Precio)
+                        if (Convert.ToDouble(txtDinero.Text) > lataExtraida.Precio)
                         {
-                            MessageBox.Show("Ha comprado la lata: " + lataExtraida.Nombre + " sabor " + lataExtraida.Sabor + "\nSu vuelto: $" + (Convert.ToDouble(txtDinero) - lataExtraida.Precio).ToString());
+                            MessageBox.Show("Ha comprado la lata: " + lataExtraida.Nombre + " sabor " + lataExtraida.Sabor + "\nSu vuelto: $" + (Convert.ToDouble(txtDinero.Text) - lataExtraida.Precio).ToString());
                         }
-                        else if(Convert.ToDouble(txtDinero) == lataExtraida.Precio)
+                        else if(Convert.ToDouble(txtDinero.Text) == lataExtraida.Precio)
                         {
                             MessageBox.Show("Ha comprado la lata: " + lataExtraida.Nombre + " sabor " + lataExtraida.Sabor);
                         }
@@ -186,6 +223,18 @@ namespace ExpendedoraForms
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+        private void lstExtraerLata_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Lata seleccionada = (Lata)lstExtraerLata.SelectedItem;
+            if (seleccionada != null)
+            {
+                CompletarFormulario(seleccionada);
+            }
+        }
+        private void frmExtraerLata_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

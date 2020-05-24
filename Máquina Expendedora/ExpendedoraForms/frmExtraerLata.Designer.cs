@@ -63,6 +63,7 @@
             this.lstExtraerLata.Name = "lstExtraerLata";
             this.lstExtraerLata.Size = new System.Drawing.Size(334, 180);
             this.lstExtraerLata.TabIndex = 3;
+            this.lstExtraerLata.SelectedIndexChanged += new System.EventHandler(this.lstExtraerLata_SelectedIndexChanged);
             // 
             // lblCodigoEx
             // 
@@ -186,6 +187,7 @@
             this.Controls.Add(this.lblExtraerLata);
             this.Name = "frmExtraerLata";
             this.Text = "Expendedora";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmExtraerLata_FormClosing);
             this.Load += new System.EventHandler(this.frmExtraerLata_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

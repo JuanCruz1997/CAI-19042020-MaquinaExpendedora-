@@ -124,6 +124,34 @@ namespace ExpendedoraForms
                     return "";
             }
         }
+        private void CompletarFormulario(Lata seleccionada)
+        {
+            switch (seleccionada.Codigo)
+            {
+                case "CO1":
+                    cmbCodigo.SelectedIndex = 1;
+                    break;
+                case "CO2":
+                    cmbCodigo.SelectedIndex = 2;
+                    break;
+                case "SP1":
+                    cmbCodigo.SelectedIndex = 3;
+                    break;
+                case "SP2":
+                    cmbCodigo.SelectedIndex = 4;
+                    break;
+                case "FA1":
+                    cmbCodigo.SelectedIndex = 5;
+                    break;
+                case "FA2":
+                    cmbCodigo.SelectedIndex = 6;
+                    break;
+                default:
+                    cmbCodigo.SelectedIndex = 0;
+                    break;
+            }
+            txtVolumen.Text = seleccionada.Volumen.ToString();
+        }
         #endregion
         #region "Eventos"
         private void frmIngresoLata_Load(object sender, EventArgs e)
@@ -141,6 +169,10 @@ namespace ExpendedoraForms
                 {
                     Application.Exit();
                 }
+            }
+            else
+            {
+                Application.Exit();
             }
         }
         private void cmbTipoCodigo_SelectedIndexChanged(object sender, EventArgs e)
@@ -161,6 +193,11 @@ namespace ExpendedoraForms
                     this.Owner.Show();
                     this.Dispose();
                 }
+            }
+            else
+            {
+                this.Owner.Show();
+                this.Dispose();
             }
         }
 
@@ -187,10 +224,13 @@ namespace ExpendedoraForms
                 }
             }
         }
-
         private void lstLatasIngreso_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Lata seleccionada = (Lata)lstLatasIngreso.SelectedItem;
+            if (seleccionada != null)
+            {
+                CompletarFormulario(seleccionada);
+            }
         }
     }
     #endregion
