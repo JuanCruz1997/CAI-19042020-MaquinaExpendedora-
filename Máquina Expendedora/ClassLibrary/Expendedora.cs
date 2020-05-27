@@ -61,24 +61,28 @@ namespace ClassLibrary
                 throw new CapacidadInsuficienteException();
             }
         }
-        public Lata ExtraerLata(string codigo, double dinero)
+        public ResultadoExtraccion ExtraerLata(string codigo, double dinero)
         {
-            Lata extraccion = null;
+            Lata lataAExtraer = null;
+            double vueltoADar = 0;
             foreach (Lata l in this._latas)
             {
                 if (codigo == l.Codigo)
                 {
                     if (dinero == l.Precio)
                     {
-                        extraccion = l;
+                        lataAExtraer = l;
+                        vueltoADar = 0;
                         this._latas.Remove(l);
                         this._dinero += dinero;
                         break;
                     }else if (dinero > l.Precio)
                     {
-                        extraccion = l;
+                        lataAExtraer = l;
+                        vueltoADar = dinero - l.Precio;
                         this._latas.Remove(l);
                         this._dinero += l.Precio;
+                        break;
                     }
                     else
                     {
@@ -86,9 +90,10 @@ namespace ClassLibrary
                     }
                 }
             }
-            if (extraccion != null)
+            if (lataAExtraer != null)
             {
-                return extraccion;
+                ResultadoExtraccion result = new ResultadoExtraccion(lataAExtraer, vueltoADar);
+                return result;
             }
             else
             {

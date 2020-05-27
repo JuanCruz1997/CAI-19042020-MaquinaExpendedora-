@@ -123,6 +123,7 @@
             this.Controls.Add(this.lblTituloOpciones);
             this.Name = "frmExpendedora";
             this.Text = "Expendedora";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmExpendedora_FormClosing);
             this.Load += new System.EventHandler(this.frmExpendedora_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

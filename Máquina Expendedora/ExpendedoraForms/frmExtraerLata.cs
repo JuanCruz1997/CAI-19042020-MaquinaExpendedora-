@@ -221,14 +221,14 @@ namespace ExpendedoraForms
                 {
                     if (ValidarCampos())
                     {
-                        Lata lataExtraida = _expendedora.ExtraerLata(TraerTipoSeleccionado(), Convert.ToDouble(txtDinero.Text));
-                        if (Convert.ToDouble(txtDinero.Text) > lataExtraida.Precio)
+                        ResultadoExtraccion result = _expendedora.ExtraerLata(TraerTipoSeleccionado(), Convert.ToDouble(txtDinero.Text));
+                        if (Convert.ToDouble(txtDinero.Text) > result.Lata.Precio)
                         {
-                            MessageBox.Show("Ha comprado la lata: " + lataExtraida.Nombre + " sabor " + lataExtraida.Sabor + "\nSu vuelto: $" + (Convert.ToDouble(txtDinero.Text) - lataExtraida.Precio).ToString());
+                            MessageBox.Show("Ha comprado la lata: " + result.Lata.Nombre + " sabor " + result.Lata.Sabor + "\nSu vuelto: $" + result.Vuelto.ToString());
                         }
-                        else if(Convert.ToDouble(txtDinero.Text) == lataExtraida.Precio)
+                        else if(Convert.ToDouble(txtDinero.Text) == result.Lata.Precio)
                         {
-                            MessageBox.Show("Ha comprado la lata: " + lataExtraida.Nombre + " sabor " + lataExtraida.Sabor);
+                            MessageBox.Show("Ha comprado la lata: " + result.Lata.Nombre + " sabor " + result.Lata.Sabor);
                         }
                         CargarListaLatas(_expendedora.Latas);
                     }

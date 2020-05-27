@@ -149,13 +149,13 @@ namespace App_Máquina_Expendedora
                     throw new CodigoInvalidoException();
                 }
                 double dinero = ConsolaHelper.PedirDouble("dinero:");
-                Lata extraccion = app.ExtraerLata(codigo, dinero);
-                if (dinero > extraccion.Precio)
+                ResultadoExtraccion result = app.ExtraerLata(codigo, dinero);
+                if (result.Vuelto != 0)
                 {
-                    Console.WriteLine("Ha comprado la bebida " + extraccion.ToString() + "\nSu vuelto es $" + (dinero - extraccion.Precio));
-                }else if (dinero == extraccion.Precio)
+                    Console.WriteLine("Ha comprado la bebida " + result.Lata.ToString() + "\nSu vuelto es $" + result.Vuelto);
+                }else if (result.Vuelto == 0)
                 {
-                    Console.WriteLine("Ha comprado la bebida " + extraccion.ToString());
+                    Console.WriteLine("Ha comprado la bebida " + result.Lata.ToString());
                 }
             }
             catch (CodigoInvalidoException ciex)

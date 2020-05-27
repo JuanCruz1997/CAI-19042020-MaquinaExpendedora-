@@ -97,6 +97,10 @@ namespace ExpendedoraForms
         {
             MessageBox.Show(ObtenerStock(), "Stock");
         }
+        private void frmExpendedora_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
     #endregion
 }

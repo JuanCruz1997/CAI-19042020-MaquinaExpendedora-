@@ -247,6 +247,10 @@ namespace ExpendedoraForms
                 CompletarFormulario(seleccionada);
             }
         }
+        private void frmIngresoLata_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
     #endregion
 }

@@ -45,6 +45,7 @@
     <Compile Include="Expendedora.cs" />
     <Compile Include="Lata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultadoExtraccion.cs" />
     <Compile Include="Validaciones.cs" />
   </ItemGroup>
   <ItemGroup>

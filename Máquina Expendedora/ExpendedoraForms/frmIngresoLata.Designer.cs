@@ -195,6 +195,7 @@
             this.Controls.Add(this.lblIngresar);
             this.Name = "frmIngresoLata";
             this.Text = "Expendedora";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmIngresoLata_FormClosed);
             this.Load += new System.EventHandler(this.frmIngresoLata_Load);
             ((System.ComponentModel.ISupportInitialize)(this.expendedoraBindingSource)).EndInit();
             this.ResumeLayout(false);
