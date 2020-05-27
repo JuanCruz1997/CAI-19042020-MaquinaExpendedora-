@@ -152,7 +152,7 @@ namespace ExpendedoraForms
             txtDinero.Text = seleccionada.Precio.ToString();
         }
         #endregion
-
+        #region "Eventos"
         private void frmExtraerLata_Load(object sender, EventArgs e)
         {
             CargarComboCodigoEx();
@@ -160,6 +160,21 @@ namespace ExpendedoraForms
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string cod = cmbCodigoEx.SelectedValue.ToString();
+            if (cod != "(Elija una opción)")
+            {
+                foreach (Lata l in ((List<Lata>)lstExtraerLata.DataSource))
+                {
+                    if (l.Codigo == cod)
+                    {
+                        lstExtraerLata.SelectedItem = l;
+                    }
+                }
+            }
+            else
+            {
+                txtDinero.Text = String.Empty;
+            }
             Cambiarlbl();
         }
         private void btnApagarEx_Click(object sender, EventArgs e)
@@ -184,13 +199,13 @@ namespace ExpendedoraForms
                 DialogResult pregunta = MessageBox.Show("Se perderán los datos ingresados. ¿Está seguro de volver al menú principal?", "Atención", MessageBoxButtons.YesNo);
                 if (pregunta.ToString() == "Yes")
                 {
-                    this.Owner.ShowReload();
+                    ((frmExpendedora)this.Owner).ShowReload();
                     this.Dispose();
                 }
             }
             else
             {
-                this.Owner.ShowReload();
+                ((frmExpendedora)this.Owner).ShowReload();
                 this.Dispose();
             }
         }
@@ -234,7 +249,8 @@ namespace ExpendedoraForms
         }
         private void frmExtraerLata_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+            Application.Exit();
         }
+        #endregion
     }
 }

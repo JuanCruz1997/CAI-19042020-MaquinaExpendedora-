@@ -177,6 +177,21 @@ namespace ExpendedoraForms
         }
         private void cmbTipoCodigo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string cod = cmbCodigo.SelectedValue.ToString();
+            if (cod != "(Elija una opción)")
+            {
+                foreach (Lata l in ((List<Lata>)lstLatasIngreso.DataSource))
+                {
+                    if (l.Codigo == cod)
+                    {
+                        lstLatasIngreso.SelectedItem = l;
+                    }
+                }
+            }
+            else
+            {
+                txtVolumen.Text = String.Empty;
+            }
             Cambiarlbl();
         }
         private void lblPrecio_Click(object sender, EventArgs e)
@@ -190,13 +205,13 @@ namespace ExpendedoraForms
                 DialogResult pregunta = MessageBox.Show("Se perderán los datos ingresados. ¿Está seguro de volver al menú principal?", "Atención", MessageBoxButtons.YesNo);
                 if (pregunta.ToString() == "Yes")
                 {
-                    this.Owner.Show();
+                    ((frmExpendedora)this.Owner).ShowReload();
                     this.Dispose();
                 }
             }
             else
             {
-                this.Owner.Show();
+                ((frmExpendedora)this.Owner).ShowReload();
                 this.Dispose();
             }
         }
