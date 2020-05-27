@@ -48,6 +48,10 @@ namespace ClassLibrary
         }
         public string Nombre
         {
+            set
+            {
+                this._nombre = value;
+            }
             get
             {
                 return this._nombre;
@@ -55,6 +59,10 @@ namespace ClassLibrary
         }
         public string Sabor
         {
+            set
+            {
+                this._sabor = value;
+            }
             get
             {
                 return this._sabor;
@@ -62,6 +70,10 @@ namespace ClassLibrary
         }
         public double Precio
         {
+            set
+            {
+                this._precio = value;
+            }
             get
             {
                 return this._precio;
