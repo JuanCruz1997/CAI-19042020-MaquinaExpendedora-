@@ -67,7 +67,7 @@
             // 
             // btnApagarIngreso
             // 
-            this.btnApagarIngreso.Location = new System.Drawing.Point(272, 396);
+            this.btnApagarIngreso.Location = new System.Drawing.Point(272, 406);
             this.btnApagarIngreso.Name = "btnApagarIngreso";
             this.btnApagarIngreso.Size = new System.Drawing.Size(75, 32);
             this.btnApagarIngreso.TabIndex = 8;
@@ -140,7 +140,7 @@
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(141, 396);
+            this.btnIngresar.Location = new System.Drawing.Point(132, 406);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(85, 32);
             this.btnIngresar.TabIndex = 19;
@@ -151,7 +151,7 @@
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(12, 396);
+            this.btnVolver.Location = new System.Drawing.Point(12, 406);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 32);
             this.btnVolver.TabIndex = 20;
@@ -174,7 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ExpendedoraForms.Properties.Resources.unnamed;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(359, 440);
+            this.ClientSize = new System.Drawing.Size(359, 450);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lblSabor);
