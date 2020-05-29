@@ -101,7 +101,7 @@
             // 
             // btnApagar
             // 
-            this.btnApagar.Location = new System.Drawing.Point(270, 406);
+            this.btnApagar.Location = new System.Drawing.Point(13, 406);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Size = new System.Drawing.Size(75, 32);
             this.btnApagar.TabIndex = 7;
@@ -113,6 +113,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ExpendedoraForms.Properties.Resources.unnamed__1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(359, 450);
             this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnStock);

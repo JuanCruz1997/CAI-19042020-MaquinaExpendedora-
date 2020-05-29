@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblIngresar = new System.Windows.Forms.Label();
             this.lstLatasIngreso = new System.Windows.Forms.ListBox();
             this.btnApagarIngreso = new System.Windows.Forms.Button();
@@ -42,8 +41,6 @@
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.cmbCodigo = new System.Windows.Forms.ComboBox();
-            this.expendedoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.expendedoraBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIngresar
@@ -171,14 +168,12 @@
             this.cmbCodigo.TabIndex = 10;
             this.cmbCodigo.SelectedIndexChanged += new System.EventHandler(this.cmbTipoCodigo_SelectedIndexChanged);
             // 
-            // expendedoraBindingSource
-            // 
-            this.expendedoraBindingSource.DataSource = typeof(ClassLibrary.Expendedora);
-            // 
             // frmIngresoLata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ExpendedoraForms.Properties.Resources.unnamed;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(359, 440);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnIngresar);
@@ -197,7 +192,6 @@
             this.Text = "Expendedora";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmIngresoLata_FormClosed);
             this.Load += new System.EventHandler(this.frmIngresoLata_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.expendedoraBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,6 +212,5 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.ComboBox cmbCodigo;
-        private System.Windows.Forms.BindingSource expendedoraBindingSource;
     }
 }

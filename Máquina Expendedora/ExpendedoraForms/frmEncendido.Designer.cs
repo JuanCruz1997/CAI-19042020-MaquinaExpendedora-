@@ -31,17 +31,20 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEncender = new System.Windows.Forms.Button();
             this.btnApagar = new System.Windows.Forms.Button();
+            this.lblMarca = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Calibri Light", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(25, 29);
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(93, 50);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(278, 66);
+            this.lblTitulo.Size = new System.Drawing.Size(167, 66);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Máquina expendedora\r\nde latas de gaseosa";
+            this.lblTitulo.Text = "Máquina\r\nExpendedora";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnEncender
@@ -64,11 +67,27 @@
             this.btnApagar.UseVisualStyleBackColor = true;
             this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
+            // lblMarca
+            // 
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.BackColor = System.Drawing.Color.Transparent;
+            this.lblMarca.Font = new System.Drawing.Font("Calibri Light", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.ForeColor = System.Drawing.Color.White;
+            this.lblMarca.Location = new System.Drawing.Point(159, 413);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(84, 17);
+            this.lblMarca.TabIndex = 4;
+            this.lblMarca.Text = "Powered by";
+            // 
             // frmEncendido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Red;
+            this.BackgroundImage = global::ExpendedoraForms.Properties.Resources.unnamed__1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(359, 450);
+            this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.btnEncender);
             this.Controls.Add(this.lblTitulo);
@@ -85,6 +104,7 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnEncender;
         private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.Label lblMarca;
     }
 }
 
