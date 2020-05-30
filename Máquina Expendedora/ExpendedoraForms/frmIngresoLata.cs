@@ -191,6 +191,7 @@ namespace ExpendedoraForms
             else
             {
                 txtVolumen.Text = String.Empty;
+                lstLatasIngreso.SelectedIndex = -1;
             }
             Cambiarlbl();
         }

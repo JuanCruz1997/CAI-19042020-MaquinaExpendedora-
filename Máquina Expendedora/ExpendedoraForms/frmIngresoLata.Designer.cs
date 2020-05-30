@@ -161,6 +161,7 @@
             // 
             // cmbCodigo
             // 
+            this.cmbCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCodigo.FormattingEnabled = true;
             this.cmbCodigo.Location = new System.Drawing.Point(141, 256);
             this.cmbCodigo.Name = "cmbCodigo";
@@ -172,7 +173,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ExpendedoraForms.Properties.Resources.unnamed;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(359, 450);
             this.Controls.Add(this.btnVolver);
