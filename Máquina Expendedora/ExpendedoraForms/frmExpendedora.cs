@@ -52,6 +52,7 @@ namespace ExpendedoraForms
         public void ShowReload()
         {
             CargarListaLatas(_expendedora.Latas);
+            lstLatas.SelectedIndex = -1;
             this.Show();
         }
         #endregion
@@ -59,6 +60,7 @@ namespace ExpendedoraForms
         private void frmExpendedora_Load(object sender, EventArgs e)
         {
             CargarListaLatas(_expendedora.Latas);
+            lstLatas.SelectedIndex = -1;
         }
         private void lstLatas_SelectedIndexChanged(object sender, EventArgs e)
         {

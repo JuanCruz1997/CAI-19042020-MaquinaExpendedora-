@@ -40,79 +40,97 @@
             // lblTituloOpciones
             // 
             this.lblTituloOpciones.AutoSize = true;
-            this.lblTituloOpciones.Font = new System.Drawing.Font("Calibri Light", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloOpciones.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloOpciones.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloOpciones.ForeColor = System.Drawing.Color.White;
             this.lblTituloOpciones.Location = new System.Drawing.Point(55, 9);
             this.lblTituloOpciones.Name = "lblTituloOpciones";
-            this.lblTituloOpciones.Size = new System.Drawing.Size(238, 33);
+            this.lblTituloOpciones.Size = new System.Drawing.Size(234, 35);
             this.lblTituloOpciones.TabIndex = 1;
             this.lblTituloOpciones.Text = "¿Qué desea hacer?";
             this.lblTituloOpciones.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lstLatas
             // 
+            this.lstLatas.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstLatas.FormattingEnabled = true;
             this.lstLatas.HorizontalScrollbar = true;
-            this.lstLatas.ItemHeight = 16;
+            this.lstLatas.ItemHeight = 21;
             this.lstLatas.Location = new System.Drawing.Point(12, 55);
             this.lstLatas.Name = "lstLatas";
-            this.lstLatas.Size = new System.Drawing.Size(334, 180);
+            this.lstLatas.Size = new System.Drawing.Size(334, 172);
             this.lstLatas.TabIndex = 2;
             this.lstLatas.SelectedIndexChanged += new System.EventHandler(this.lstLatas_SelectedIndexChanged);
             // 
             // btnIngresarLata
             // 
+            this.btnIngresarLata.BackColor = System.Drawing.Color.White;
+            this.btnIngresarLata.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresarLata.ForeColor = System.Drawing.Color.Red;
             this.btnIngresarLata.Location = new System.Drawing.Point(13, 241);
             this.btnIngresarLata.Name = "btnIngresarLata";
             this.btnIngresarLata.Size = new System.Drawing.Size(333, 35);
             this.btnIngresarLata.TabIndex = 3;
             this.btnIngresarLata.Text = "Ingresar Lata";
-            this.btnIngresarLata.UseVisualStyleBackColor = true;
+            this.btnIngresarLata.UseVisualStyleBackColor = false;
             this.btnIngresarLata.Click += new System.EventHandler(this.btnIngresarLata_Click);
             // 
             // btnExtraerLata
             // 
+            this.btnExtraerLata.BackColor = System.Drawing.Color.White;
+            this.btnExtraerLata.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExtraerLata.ForeColor = System.Drawing.Color.Red;
             this.btnExtraerLata.Location = new System.Drawing.Point(12, 282);
             this.btnExtraerLata.Name = "btnExtraerLata";
             this.btnExtraerLata.Size = new System.Drawing.Size(333, 35);
             this.btnExtraerLata.TabIndex = 4;
             this.btnExtraerLata.Text = "Extraer Lata";
-            this.btnExtraerLata.UseVisualStyleBackColor = true;
+            this.btnExtraerLata.UseVisualStyleBackColor = false;
             this.btnExtraerLata.Click += new System.EventHandler(this.btnExtraerLata_Click);
             // 
             // btnBalance
             // 
+            this.btnBalance.BackColor = System.Drawing.Color.White;
+            this.btnBalance.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBalance.ForeColor = System.Drawing.Color.Red;
             this.btnBalance.Location = new System.Drawing.Point(12, 323);
             this.btnBalance.Name = "btnBalance";
             this.btnBalance.Size = new System.Drawing.Size(333, 35);
             this.btnBalance.TabIndex = 5;
             this.btnBalance.Text = "Ver Balance";
-            this.btnBalance.UseVisualStyleBackColor = true;
+            this.btnBalance.UseVisualStyleBackColor = false;
             this.btnBalance.Click += new System.EventHandler(this.btnBalance_Click);
             // 
             // btnStock
             // 
+            this.btnStock.BackColor = System.Drawing.Color.White;
+            this.btnStock.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.ForeColor = System.Drawing.Color.Red;
             this.btnStock.Location = new System.Drawing.Point(12, 364);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(333, 35);
             this.btnStock.TabIndex = 6;
             this.btnStock.Text = "Stock";
-            this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.UseVisualStyleBackColor = false;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
             // btnApagar
             // 
+            this.btnApagar.BackColor = System.Drawing.Color.White;
+            this.btnApagar.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApagar.Location = new System.Drawing.Point(13, 406);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Size = new System.Drawing.Size(75, 32);
             this.btnApagar.TabIndex = 7;
             this.btnApagar.Text = "Apagar";
-            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.UseVisualStyleBackColor = false;
             this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // frmExpendedora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ExpendedoraForms.Properties.Resources.unnamed__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(359, 450);
             this.Controls.Add(this.btnApagar);
@@ -123,6 +141,7 @@
             this.Controls.Add(this.lstLatas);
             this.Controls.Add(this.lblTituloOpciones);
             this.Name = "frmExpendedora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expendedora";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmExpendedora_FormClosing);
             this.Load += new System.EventHandler(this.frmExpendedora_Load);

@@ -49,36 +49,43 @@ namespace ExpendedoraForms
                     lblPrecioEx.Text = "Precio: $35";
                     lblMarcaEx.Text = "Marca: Coca Cola";
                     lblSaborEx.Text = "Sabor: Regular";
+                    lblVolumen.Text = "Volumen: 355cc";
                     break;
                 case "CO2":
                     lblPrecioEx.Text = "Precio: $45";
                     lblMarcaEx.Text = "Marca: Coca Cola";
                     lblSaborEx.Text = "Sabor: Zero";
+                    lblVolumen.Text = "Volumen: 355cc";
                     break;
                 case "SP1":
                     lblPrecioEx.Text = "Precio: $33";
                     lblMarcaEx.Text = "Marca: Sprite";
                     lblSaborEx.Text = "Sabor: Regular";
+                    lblVolumen.Text = "Volumen: 220cc";
                     break;
                 case "SP2":
                     lblPrecioEx.Text = "Precio: $43";
                     lblMarcaEx.Text = "Marca: Sprite";
                     lblSaborEx.Text = "Sabor: Zero";
+                    lblVolumen.Text = "Volumen: 220cc";
                     break;
                 case "FA1":
                     lblPrecioEx.Text = "Precio: $50";
                     lblMarcaEx.Text = "Marca: Fanta";
                     lblSaborEx.Text = "Sabor: Regular";
+                    lblVolumen.Text = "Volumen: 355cc";
                     break;
                 case "FA2":
                     lblPrecioEx.Text = "Precio: $60";
                     lblMarcaEx.Text = "Marca: Fanta";
                     lblSaborEx.Text = "Sabor: Zero";
+                    lblVolumen.Text = "Volumen: 355cc";
                     break;
                 default:
                     lblPrecioEx.Text = "Precio:";
                     lblMarcaEx.Text = "Marca:";
                     lblSaborEx.Text = "Sabor:";
+                    lblVolumen.Text = "Volumen:";
                     break;
             }
         }
@@ -151,12 +158,28 @@ namespace ExpendedoraForms
             }
             txtDinero.Text = seleccionada.Precio.ToString();
         }
+        private void GrisarCampos()
+        {
+            cmbCodigoEx.Enabled = false;
+            txtDinero.Enabled = false;
+            btnExtraer.Enabled = false;
+        }
+        private void BloquearExtraccion()
+        {
+            MessageBox.Show("No hay latas para extraer, por favor ingrese latas en la opción correspondiente", "Expendedora vacía");
+            GrisarCampos();
+        }
         #endregion
         #region "Eventos"
         private void frmExtraerLata_Load(object sender, EventArgs e)
         {
             CargarComboCodigoEx();
             CargarListaLatas(_expendedora.Latas);
+            if (_expendedora.Latas.Count == 0)
+            {
+                BloquearExtraccion();
+            }
+            lstExtraerLata.SelectedIndex = -1;
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -231,6 +254,11 @@ namespace ExpendedoraForms
                             MessageBox.Show("Ha comprado la lata: " + result.Lata.Nombre + " sabor " + result.Lata.Sabor);
                         }
                         CargarListaLatas(_expendedora.Latas);
+                        lstExtraerLata.SelectedIndex = -1;
+                        if (_expendedora.Latas.Count == 0)
+                        {
+                            BloquearExtraccion();
+                        }
                     }
                 }
                 catch (Exception ex)

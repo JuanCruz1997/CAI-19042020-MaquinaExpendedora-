@@ -152,12 +152,27 @@ namespace ExpendedoraForms
             }
             txtVolumen.Text = seleccionada.Volumen.ToString();
         }
+        private void GrisarCampos()
+        {
+            cmbCodigo.Enabled = false;
+            txtVolumen.Enabled = false;
+            btnIngresar.Enabled = false;
+        }
+        private void BloquearIngreso()
+        {
+            MessageBox.Show("Se alcanzó la capacidad máxima de la expendedora. No se podrán ingresar más latas hasta que se alguna sea extraída.", "Límite de latas alcanzado");
+            GrisarCampos();
+        }
         #endregion
         #region "Eventos"
         private void frmIngresoLata_Load(object sender, EventArgs e)
         {
             CargarComboCodigo();
             CargarListaLatas(_expendedora.Latas);
+            if (_expendedora.GetCapacidadRestante() == 0)
+            {
+                BloquearIngreso();
+            }
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
@@ -232,6 +247,10 @@ namespace ExpendedoraForms
                         _expendedora.AgregarLata(new Lata(TraerTipoSeleccionado(), Convert.ToDouble(txtVolumen.Text)));
                         MessageBox.Show("Se ha añadido la lata a la expendedora.");
                         CargarListaLatas(_expendedora.Latas);
+                        if (_expendedora.GetCapacidadRestante() == 0)
+                        {
+                            BloquearIngreso();
+                        }
                     }
                 }
                 catch(Exception ex)

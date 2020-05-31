@@ -46,75 +46,91 @@
             // lblIngresar
             // 
             this.lblIngresar.AutoSize = true;
-            this.lblIngresar.Font = new System.Drawing.Font("Calibri Light", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngresar.Location = new System.Drawing.Point(93, 9);
+            this.lblIngresar.BackColor = System.Drawing.Color.Transparent;
+            this.lblIngresar.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresar.ForeColor = System.Drawing.Color.White;
+            this.lblIngresar.Location = new System.Drawing.Point(181, 9);
             this.lblIngresar.Name = "lblIngresar";
-            this.lblIngresar.Size = new System.Drawing.Size(168, 33);
+            this.lblIngresar.Size = new System.Drawing.Size(165, 35);
             this.lblIngresar.TabIndex = 2;
             this.lblIngresar.Text = "Ingresar Lata";
             this.lblIngresar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lstLatasIngreso
             // 
+            this.lstLatasIngreso.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstLatasIngreso.FormattingEnabled = true;
             this.lstLatasIngreso.HorizontalScrollbar = true;
-            this.lstLatasIngreso.ItemHeight = 16;
+            this.lstLatasIngreso.ItemHeight = 21;
             this.lstLatasIngreso.Location = new System.Drawing.Point(12, 55);
             this.lstLatasIngreso.Name = "lstLatasIngreso";
-            this.lstLatasIngreso.Size = new System.Drawing.Size(334, 180);
+            this.lstLatasIngreso.Size = new System.Drawing.Size(334, 172);
             this.lstLatasIngreso.TabIndex = 3;
             this.lstLatasIngreso.SelectedIndexChanged += new System.EventHandler(this.lstLatasIngreso_SelectedIndexChanged);
             // 
             // btnApagarIngreso
             // 
-            this.btnApagarIngreso.Location = new System.Drawing.Point(272, 406);
+            this.btnApagarIngreso.BackColor = System.Drawing.Color.White;
+            this.btnApagarIngreso.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApagarIngreso.Location = new System.Drawing.Point(271, 411);
             this.btnApagarIngreso.Name = "btnApagarIngreso";
             this.btnApagarIngreso.Size = new System.Drawing.Size(75, 32);
             this.btnApagarIngreso.TabIndex = 8;
             this.btnApagarIngreso.Text = "Apagar";
-            this.btnApagarIngreso.UseVisualStyleBackColor = true;
+            this.btnApagarIngreso.UseVisualStyleBackColor = false;
             this.btnApagarIngreso.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(12, 256);
+            this.lblCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.lblCodigo.Font = new System.Drawing.Font("Calibri", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.ForeColor = System.Drawing.Color.White;
+            this.lblCodigo.Location = new System.Drawing.Point(70, 260);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(123, 17);
+            this.lblCodigo.Size = new System.Drawing.Size(60, 19);
             this.lblCodigo.TabIndex = 9;
-            this.lblCodigo.Text = "Seleccione código";
+            this.lblCodigo.Text = "Código:";
             // 
             // lblVolumen
             // 
             this.lblVolumen.AutoSize = true;
-            this.lblVolumen.Location = new System.Drawing.Point(13, 294);
+            this.lblVolumen.BackColor = System.Drawing.Color.Transparent;
+            this.lblVolumen.Font = new System.Drawing.Font("Calibri", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVolumen.ForeColor = System.Drawing.Color.White;
+            this.lblVolumen.Location = new System.Drawing.Point(55, 296);
             this.lblVolumen.Name = "lblVolumen";
-            this.lblVolumen.Size = new System.Drawing.Size(112, 17);
+            this.lblVolumen.Size = new System.Drawing.Size(73, 19);
             this.lblVolumen.TabIndex = 11;
-            this.lblVolumen.Text = "Ingrese volumen";
+            this.lblVolumen.Text = "Volumen:";
             // 
             // txtVolumen
             // 
+            this.txtVolumen.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVolumen.Location = new System.Drawing.Point(141, 294);
             this.txtVolumen.Name = "txtVolumen";
-            this.txtVolumen.Size = new System.Drawing.Size(205, 22);
+            this.txtVolumen.Size = new System.Drawing.Size(205, 26);
             this.txtVolumen.TabIndex = 12;
             // 
             // lblPropiedades
             // 
             this.lblPropiedades.AutoSize = true;
+            this.lblPropiedades.BackColor = System.Drawing.Color.Transparent;
+            this.lblPropiedades.Font = new System.Drawing.Font("Calibri", 9.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPropiedades.Location = new System.Drawing.Point(9, 333);
             this.lblPropiedades.Name = "lblPropiedades";
-            this.lblPropiedades.Size = new System.Drawing.Size(179, 17);
+            this.lblPropiedades.Size = new System.Drawing.Size(190, 19);
             this.lblPropiedades.TabIndex = 13;
             this.lblPropiedades.Text = "Datos de la lata a ingresar:";
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
+            this.lblPrecio.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrecio.Font = new System.Drawing.Font("Calibri", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.Location = new System.Drawing.Point(13, 360);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(52, 17);
+            this.lblPrecio.Size = new System.Drawing.Size(56, 19);
             this.lblPrecio.TabIndex = 14;
             this.lblPrecio.Text = "Precio:";
             this.lblPrecio.Click += new System.EventHandler(this.lblPrecio_Click);
@@ -122,50 +138,58 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(96, 360);
+            this.lblMarca.BackColor = System.Drawing.Color.Transparent;
+            this.lblMarca.Font = new System.Drawing.Font("Calibri", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMarca.Location = new System.Drawing.Point(108, 360);
             this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(51, 17);
+            this.lblMarca.Size = new System.Drawing.Size(56, 19);
             this.lblMarca.TabIndex = 15;
             this.lblMarca.Text = "Marca:";
             // 
             // lblSabor
             // 
             this.lblSabor.AutoSize = true;
-            this.lblSabor.Location = new System.Drawing.Point(222, 360);
+            this.lblSabor.BackColor = System.Drawing.Color.Transparent;
+            this.lblSabor.Font = new System.Drawing.Font("Calibri", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSabor.Location = new System.Drawing.Point(13, 385);
             this.lblSabor.Name = "lblSabor";
-            this.lblSabor.Size = new System.Drawing.Size(50, 17);
+            this.lblSabor.Size = new System.Drawing.Size(53, 19);
             this.lblSabor.TabIndex = 16;
             this.lblSabor.Text = "Sabor:";
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(132, 406);
+            this.btnIngresar.BackColor = System.Drawing.Color.White;
+            this.btnIngresar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.ForeColor = System.Drawing.Color.Red;
+            this.btnIngresar.Location = new System.Drawing.Point(132, 411);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(85, 32);
+            this.btnIngresar.Size = new System.Drawing.Size(89, 32);
             this.btnIngresar.TabIndex = 19;
             this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // btnVolver
             // 
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(12, 406);
+            this.btnVolver.BackColor = System.Drawing.Color.White;
+            this.btnVolver.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(12, 411);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 32);
+            this.btnVolver.Size = new System.Drawing.Size(80, 32);
             this.btnVolver.TabIndex = 20;
             this.btnVolver.Text = "< Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // cmbCodigo
             // 
             this.cmbCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCodigo.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCodigo.FormattingEnabled = true;
             this.cmbCodigo.Location = new System.Drawing.Point(141, 256);
             this.cmbCodigo.Name = "cmbCodigo";
-            this.cmbCodigo.Size = new System.Drawing.Size(205, 24);
+            this.cmbCodigo.Size = new System.Drawing.Size(205, 26);
             this.cmbCodigo.TabIndex = 10;
             this.cmbCodigo.SelectedIndexChanged += new System.EventHandler(this.cmbTipoCodigo_SelectedIndexChanged);
             // 
@@ -173,6 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ExpendedoraForms.Properties.Resources.unnamed;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(359, 450);
             this.Controls.Add(this.btnVolver);
@@ -189,6 +214,7 @@
             this.Controls.Add(this.lstLatasIngreso);
             this.Controls.Add(this.lblIngresar);
             this.Name = "frmIngresoLata";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expendedora";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmIngresoLata_FormClosed);
             this.Load += new System.EventHandler(this.frmIngresoLata_Load);
