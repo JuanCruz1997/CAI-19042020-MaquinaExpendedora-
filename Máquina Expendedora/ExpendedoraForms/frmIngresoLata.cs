@@ -174,7 +174,6 @@ namespace ExpendedoraForms
                 BloquearIngreso();
             }
         }
-
         private void btnApagar_Click(object sender, EventArgs e)
         {
             if (cmbCodigo.SelectedIndex != 0 || txtVolumen.Text != String.Empty)

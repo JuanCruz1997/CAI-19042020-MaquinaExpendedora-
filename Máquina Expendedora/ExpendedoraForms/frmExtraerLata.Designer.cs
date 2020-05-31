@@ -140,7 +140,7 @@
             this.btnExtraer.BackColor = System.Drawing.Color.White;
             this.btnExtraer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExtraer.ForeColor = System.Drawing.Color.Red;
-            this.btnExtraer.Location = new System.Drawing.Point(131, 406);
+            this.btnExtraer.Location = new System.Drawing.Point(134, 406);
             this.btnExtraer.Name = "btnExtraer";
             this.btnExtraer.Size = new System.Drawing.Size(85, 32);
             this.btnExtraer.TabIndex = 25;

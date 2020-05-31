@@ -162,7 +162,7 @@
             this.btnIngresar.BackColor = System.Drawing.Color.White;
             this.btnIngresar.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.Red;
-            this.btnIngresar.Location = new System.Drawing.Point(132, 411);
+            this.btnIngresar.Location = new System.Drawing.Point(136, 411);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(89, 32);
             this.btnIngresar.TabIndex = 19;
